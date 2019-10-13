@@ -33,4 +33,6 @@ prediction = pd.Series(prediction).apply(lambda x: 0 if x<0.5 else 1)
 # %% Create Dataframe for submission
 output = {'PassengerId' : test.PassengerId, 'Survived': prediction}
 df = pd.DataFrame(output)
-df.to_csv('submission-python.csv')
+# %%
+os.chdir(r'../submissions')
+df.to_csv('ols-py.csv')
