@@ -20,4 +20,4 @@ df = pd.DataFrame(output)
 # %%
 print(df)
 os.chdir(r'../submissions')
-df.to_csv('tree-py.csv')
+df.to_csv('tree-py.csv', index=False)
